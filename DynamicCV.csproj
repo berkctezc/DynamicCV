@@ -76,6 +76,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Default.aspx" />
+    <Content Include="Deneyimler.aspx" />
+    <Content Include="YeniYetenek.aspx" />
+    <Content Include="Yeteneklerim.aspx" />
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
@@ -1822,14 +1825,43 @@
     <Content Include="web\js\jquery.prettyPhoto.js" />
     <Content Include="web\js\site.js" />
     <Content Include="web\styles.css" />
+    <Content Include="YetenekSil.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Deneyimler.aspx.cs">
+      <DependentUpon>Deneyimler.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Deneyimler.aspx.designer.cs">
+      <DependentUpon>Deneyimler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="YeniYetenek.aspx.cs">
+      <DependentUpon>YeniYetenek.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="YeniYetenek.aspx.designer.cs">
+      <DependentUpon>YeniYetenek.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Yeteneklerim.aspx.cs">
+      <DependentUpon>Yeteneklerim.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Yeteneklerim.aspx.designer.cs">
+      <DependentUpon>Yeteneklerim.aspx</DependentUpon>
     </Compile>
     <Compile Include="Model1.Context.cs">
       <AutoGen>True</AutoGen>
@@ -1862,6 +1894,13 @@
     <Compile Include="TBL_YETENEKLER.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="YetenekSil.aspx.cs">
+      <DependentUpon>YetenekSil.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="YetenekSil.aspx.designer.cs">
+      <DependentUpon>YetenekSil.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EntityDeploy Include="Model1.edmx">
@@ -1871,6 +1910,7 @@
     <Content Include="Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
     </Content>
+    <Content Include="Admin.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

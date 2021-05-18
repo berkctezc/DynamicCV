@@ -143,14 +143,12 @@
             <div class="top-divider"></div>
             <div class="content">
                 <div id="form">
-                    <form action="#">
-                        <span>Name</span>
-                        <input type="text" name="name" class="name" />
-                        <span>Email</span>
-                        <input type="text" name="email" class="email" />
-                        <span>Message</span>
-                        <textarea class="message"></textarea>
-                        <input type="submit" name="submite" value="Submit" class="submit">
+                    <form action="#" method="post" runat="server">
+                        <asp:TextBox name="name" CssClass="name" ID="TextBox1" runat="server" placeholder="Adınız"></asp:TextBox>
+                        <asp:TextBox name="email" CssClass="email" ID="TextBox2" runat="server" placeholder="Email Adresiniz"></asp:TextBox>
+                        <asp:TextBox name="subject" ID="TextBox3" runat="server" placeholder="Konu"></asp:TextBox>
+                        <asp:TextBox name="message" CssClass="message" Height="50px" ID="TextBox4" runat="server" placeholder="Mesajınız"></asp:TextBox>
+                        <asp:Button ID="Button1" runat="server" Text="Gönder" CssClass="submit" OnClick="Button1_Click" />
                     </form>
                 </div>
                 <div id="social-footer">
@@ -168,24 +166,7 @@
             </div>
         </div>
         <!--End Connect Section-->
-
     </div>
-
     <!-- The JavaScript -->
-    <script type="text/javascript">$(function () {
-            $('#main-menu li a').bind('click', function (event) {
-                var $anchor = $(this);
-
-                $('html, body').stop().animate({
-                    scrollTop: $($anchor.attr('href')).offset().top
-                }, 1500, 'easeInOutExpo');
-
-                event.preventDefault();
-            });
-        });
-
-        $(document).ready(function () {
-            $("a[rel^='prettyPhoto']").prettyPhoto({ social_tools: false, deeplinking: false });
-        });</script>
+    <script type="text/javascript">$(function () { $('#main-menu li a').bind('click', function (event) { var $anchor = $(this); $('html, body').stop().animate({ scrollTop: $($anchor.attr('href')).offset().top }, 1500, 'easeInOutExpo'); event.preventDefault(); }); }); $(document).ready(function () { $("a[rel^='prettyPhoto']").prettyPhoto({ social_tools: false, deeplinking: false }); });</script>
 </body>
-</html>
