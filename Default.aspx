@@ -1,4 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="DynamicCV.Default" %>
+<%@ Import Namespace="DynamicCV" %>
 
 <!DOCTYPE html>
 <head>
@@ -17,8 +18,9 @@
 <body>
     <div id="header">
         <div id="logo">
-            <a href="#">
-                <img src="web/images/logo.png"></a>
+            <span>
+            <h2>BT</h2>
+            </span>
         </div>
         <ul id="main-menu">
             <li><a href="#about"><i class="fas fa-user"></i>Hakkımda</a></li>
@@ -29,17 +31,11 @@
         </ul>
     </div>
     <div id="container">
-        <!--Begin About Section-->
         <div id="about">
             <h1>Hakkımda</h1>
-            <ul id="top-social">
-                <li><a href="#" class="facebook">Facebook</a></li>
-                <li><a href="#" class="twitter">Twitter</a></li>
-                <li><a href="#" class="linkedin">LinkedIn</a></li>
-            </ul>
             <div class="top-divider"></div>
             <div class="content">
-                <img src="web/images/designer-photo.jpg" />
+                <img src="https://avatars.githubusercontent.com/u/43934527?s=400&u=4e040a8d780299728dd7010878118c7627ea7085&v=4" />
                 <asp:Repeater ID="Repeater1" runat="server">
                     <ItemTemplate>
                         <h2 class="text-bold">
@@ -108,38 +104,18 @@
             <div class="top-divider"></div>
             <div class="content">
                 <ul id="work-thumbs">
-                    <li><a href="web/images/work/work-full1.jpg" rel="prettyPhoto[1]" title="Image Description">
-                        <img src="web/images/work/work-thumb1.jpg"></a></li>
-                    <li><a href="images/work/work-full2.jpg" rel="prettyPhoto[1]" title="Image Description">
-                        <img src="images/work/work-thumb2.jpg"></a></li>
-                    <li><a href="images/work/work-full3.jpg" rel="prettyPhoto[1]" title="Image Description">
-                        <img src="images/work/work-thumb3.jpg"></a></li>
-                    <li class="last"><a href="images/work/work-full4.jpg" rel="prettyPhoto[1]" title="Image Description">
-                        <img src="images/work/work-thumb4.jpg"></a></li>
-                    <li><a href="images/work/work-full5.jpg" rel="prettyPhoto[1]" title="Image Description">
-                        <img src="images/work/work-thumb5.jpg"></a></li>
-                    <li><a href="images/work/work-full6.jpg" rel="prettyPhoto[1]" title="Image Description">
-                        <img src="images/work/work-thumb6.jpg"></a></li>
-                    <li><a href="images/work/work-full7.jpg" rel="prettyPhoto[1]" title="Image Description">
-                        <img src="images/work/work-thumb7.jpg"></a></li>
-                    <li class="last"><a href="images/work/work-full8.jpg" rel="prettyPhoto[1]" title="Image Description">
-                        <img src="images/work/work-thumb8.jpg"></a></li>
-                    <li><a href="images/work/work-full9.jpg" rel="prettyPhoto[1]" title="Image Description">
-                        <img src="images/work/work-thumb9.jpg"></a></li>
-                    <li><a href="images/work/work-full10.jpg" rel="prettyPhoto[1]" title="Image Description">
-                        <img src="images/work/work-thumb10.jpg"></a></li>
-                    <li><a href="images/work/work-full11.jpg" rel="prettyPhoto[1]" title="Image Description">
-                        <img src="images/work/work-thumb11.jpg"></a></li>
-                    <li class="last"><a href="images/work/work-full12.jpg" rel="prettyPhoto[1]" title="Image Description">
-                        <img src="images/work/work-thumb12.jpg"></a></li>
+                    <asp:Repeater ID="Repeater5" runat="server">
+                        <ItemTemplate>
+                            <li><a href=" <%# Eval("ADRES") %>" rel="prettyPhoto[1]" title="Image Description">
+                                <img style="max-width: 400px" src=" <%# Eval("ADRES") %>"></a></li>
+                        </ItemTemplate>
+                    </asp:Repeater>
                 </ul>
             </div>
             <div class="bottom-divider"></div>
         </div>
-        <!--End Work Section-->
-        <!--Begin Connect Section-->
         <div id="connect">
-            <h1>Bağlantılar</h1>
+            <h1>Bağlantı Kur</h1>
             <div class="top-divider"></div>
             <div class="content">
                 <div id="form">
@@ -151,16 +127,13 @@
                         <asp:Button ID="Button1" runat="server" Text="Gönder" CssClass="submit" OnClick="Button1_Click" />
                     </form>
                 </div>
-                <div id="social-footer">
-                    <h2>Follow Me:</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras diam risus, dignissim pharetra sagittis sed, adipiscing nec felis. Maecenas non nulla eget ligula semper </p>
-                    <ul id="sm-links">
-                        <li><a href="#" class="facebook">Facebook</a></li>
-                        <li><a href="#" class="twitter">Twitter</a></li>
-                        <li><a href="#" class="dribble">Dribble</a></li>
-                        <li><a href="#" class="vimeo">Vimeo</a></li>
-                        <li><a href="#" class="youtube">YouTube</a></li>
-                        <li><a href="#" class="linkedin">LinkedIn</a></li>
+                <div>
+                    <h2>Bağlantılar:</h2>
+                    <ul>
+                        <li><a href="https://berkctezc.medium.com/" target="_blank">Medium</a></li>
+                        <li><a href="https://github.com/berkctezc/" target="_blank">Github</a></li>
+                        <li><a href="https://twitter.com/berkctezc" target="_blank">Twitter</a></li>
+                        <li><a href="https://www.linkedin.com/in/berkctezc/" target="_blank">LinkedIn</a></li>
                     </ul>
                 </div>
             </div>
