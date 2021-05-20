@@ -1,10 +1,8 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="DynamicCV.Admin" %>
-
 <!DOCTYPE html>
-
 <html>
 <head runat="server">
-    <title>Bootstrap Example</title>
+    <title>Admin</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -18,13 +16,13 @@
         <nav class="navbar navbar-default">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="#">CV Sitesi Linq</a>
+                    <a class="navbar-brand" href="Default.aspx">CV Sitesi Admin Panel</a>
                 </div>
                 <ul class="nav navbar-nav">
                     <li><a href="Deneyimler.aspx">Hakkımda</a></li>
                     <li><a href="Yeteneklerim.aspx">Yetenekler</a></li>
                     <li><a href="#">Çalışmalar</a></li>
-                    <li><a href="#">İletişim</a></li>
+                    <li><a href="Iletisim.aspx">İletişim</a></li>
                 </ul>
             </div>
         </nav>
