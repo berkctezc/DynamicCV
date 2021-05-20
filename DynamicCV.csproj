@@ -2068,6 +2068,7 @@
     <Content Include="Login\vendor\bootstrap\css\bootstrap.css.map" />
     <Content Include="Login\vendor\bootstrap\css\bootstrap.min.css.map" />
     <Content Include="DbCV.bak" />
+    <Content Include="app.publish.zip" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
