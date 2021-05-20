@@ -10,6 +10,7 @@
         <EntityTypeShape EntityType="DbCVModel.TBL_ILETISIM" Width="1.5" PointX="3" PointY="3.625" IsExpanded="true" />
         <EntityTypeShape EntityType="DbCVModel.TBL_YETENEKLER" Width="1.625" PointX="0.75" PointY="3.625" IsExpanded="true" />
         <EntityTypeShape EntityType="DbCVModel.TBLHAKKIMDA" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DbCVModel.TBL_ADMIN" Width="1.5" PointX="5.375" PointY="3.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

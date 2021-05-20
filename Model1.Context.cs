@@ -30,5 +30,6 @@ namespace DynamicCV
         public virtual DbSet<TBL_ILETISIM> TBL_ILETISIM { get; set; }
         public virtual DbSet<TBL_YETENEKLER> TBL_YETENEKLER { get; set; }
         public virtual DbSet<TBLHAKKIMDA> TBLHAKKIMDAs { get; set; }
+        public virtual DbSet<TBL_ADMIN> TBL_ADMIN { get; set; }
     }
 }

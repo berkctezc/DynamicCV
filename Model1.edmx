@@ -5,6 +5,14 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="DbCVModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="TBL_ADMIN">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="KULLANICIAD" Type="varchar" MaxLength="10" />
+          <Property Name="SIFRE" Type="varchar" MaxLength="10" />
+        </EntityType>
         <EntityType Name="TBL_ADRES">
           <Key>
             <PropertyRef Name="ID" />
@@ -50,6 +58,7 @@
           <Property Name="ISDENEYIMLERI" Type="varchar" MaxLength="500" />
         </EntityType>
         <EntityContainer Name="DbCVModelStoreContainer">
+          <EntitySet Name="TBL_ADMIN" EntityType="Self.TBL_ADMIN" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_ADRES" EntityType="Self.TBL_ADRES" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_CALISMALARIM" EntityType="Self.TBL_CALISMALARIM" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBL_ILETISIM" EntityType="Self.TBL_ILETISIM" Schema="dbo" store:Type="Tables" />
@@ -110,7 +119,16 @@
           <EntitySet Name="TBL_ILETISIM" EntityType="Self.TBL_ILETISIM" />
           <EntitySet Name="TBL_YETENEKLER" EntityType="Self.TBL_YETENEKLER" />
           <EntitySet Name="TBLHAKKIMDAs" EntityType="Self.TBLHAKKIMDA" />
+          <EntitySet Name="TBL_ADMIN" EntityType="DbCVModel.TBL_ADMIN" />
         </EntityContainer>
+        <EntityType Name="TBL_ADMIN">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KULLANICIAD" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="SIFRE" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -163,6 +181,15 @@
                 <ScalarProperty Name="BILGILER" ColumnName="BILGILER" />
                 <ScalarProperty Name="EGITIM" ColumnName="EGITIM" />
                 <ScalarProperty Name="ISDENEYIMLERI" ColumnName="ISDENEYIMLERI" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBL_ADMIN">
+            <EntityTypeMapping TypeName="DbCVModel.TBL_ADMIN">
+              <MappingFragment StoreEntitySet="TBL_ADMIN">
+                <ScalarProperty Name="SIFRE" ColumnName="SIFRE" />
+                <ScalarProperty Name="KULLANICIAD" ColumnName="KULLANICIAD" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
